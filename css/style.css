@@ -1,0 +1,145 @@
+:root {
+	--color-darker: #24292e;
+	--color-dark: #586069;
+
+	--color-light: #fff;
+
+	--background-color-code: #f5f5f5; /* #e7e8e2 */
+
+	--color-red: #d31717;
+	--color-green: #28a745;
+	--color-blue: #0366d6;
+	--color-purple: #6f42c1;
+
+	--background-color-body: #000;
+
+	--color-footer: var(--color-dark);
+
+	--color-heading: var(--color-darker);
+	--color-heading-active: var(--color-dark);
+	--weight-heading: bold;
+	--font-family-heading: 'Vollkorn';
+
+	--color-body: var(--color-darker);
+	--weight-body: 400;
+	--font-family-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+	--color-link: var(--color-blue);
+	--strong-weight: 600;
+
+	--slide-fade-duration: 0.2s;
+
+	--color-em: var(--color-blue);
+}
+
+/*
+PDF support, see:
+https://github.com/gnab/remark/issues/50#issuecomment-223887379
+*/
+@page {
+	size: 1210px 681px;
+	margin: 0;
+}
+
+@media print {
+	.remark-slide-scaler {
+		width: 100% !important;
+		height: 100% !important;
+		transform: scale(1) !important;
+		top: 0 !important;
+		left: 0 !important;
+	}
+}
+
+/* Two-column layout */
+.left-column {
+	color: var(--color-heading-active);
+	width: 20%;
+	height: 92%;
+	float: left;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+	color: var(--color-heading);
+}
+.right-column {
+	width: 75%;
+	float: right;
+	padding-top: 1em;
+}
+
+/* Footer */
+.footer {
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	color: var(--color-footer);
+	font-size: 10px;
+}
+.footnote {
+	position: absolute;
+	bottom: 3em;
+}
+
+/* Code Style */
+pre .remark-code {
+	font-size: 1.25em;
+}
+.remark-code, .remark-inline-code {
+	font-family: 'Cascadia Mono', Consolas, monospace;
+}
+
+code.remark-inline-code {
+	font-weight: bold;
+}
+
+/* .remark-code-line-highlighted { background-color: #373832; } */
+code, pre {
+	font-weight: 500;
+	background: var(--background-color-code) !important;
+	border-radius: 5px;
+}
+
+body {
+	background-color: var(--background-color-body);
+	font-family: var(--font-family-body);
+	color: var(--color-body);
+	font-weight: var(--weight-body);
+}
+h1, h2, h3 {
+	font-family: var(--font-family-heading);
+	font-weight: var(--weight-heading);
+	color: var(--color-heading);
+	margin-bottom: 0;
+}
+.large { font-size: 3em; }
+li p { line-height: 1.25em; }
+
+/* Headings */
+.remark-slide-content h1 { font-size: 50pt; margin-top: 0px; }
+.remark-slide-content h2 { font-size: 2.4em; margin-top: 0px; }
+.remark-slide-content h3 { font-size: 2em; }
+
+/* Content */
+.remark-slide-content li { font-size: 22pt; margin-bottom: 8px; /* font-weight: 700; */ }
+.remark-slide-content p { font-size: 22pt; /* font-weight: 700; */ }
+
+.remark-slide-number { font-size: 18pt; }
+
+a, a > code {
+	color: var(--color-link);
+	text-decoration: none;
+}
+strong { font-weight: var(--strong-weight); }
+
+/* Utility Classes */
+.pull-left {
+	float: left;
+	width: 47%;
+}
+.pull-right {
+	float: right;
+	width: 47%;
+}
+.pull-right ~ p {
+	clear: both;
+}

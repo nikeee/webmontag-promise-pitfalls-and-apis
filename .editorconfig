@@ -1,0 +1,12 @@
+root = false
+
+[*.{css,html}]
+indent_style = tab
+indent_size = 4
+
+[*.md]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = false
+insert_final_newline = true
+
